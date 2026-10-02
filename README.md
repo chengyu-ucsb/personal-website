@@ -1,17 +1,26 @@
-# Chengyu Fang — personal website
+# Chengyu Fang's website
 
-Live address: https://chengyufang.org/
+This repository contains the files for [chengyufang.org](https://chengyufang.org/), my academic website. It includes pages about my research, publications, teaching, academic activities, and background.
 
-Publish this repository as a **project site** (`chengyu-ucsb/personal-website`) with `chengyufang.org` configured as its custom domain. Keep the separate `chengyu-ucsb.github.io` account site without a custom domain so other project sites retain their `https://chengyu-ucsb.github.io/<repository>/` URLs.
+## Site files
 
-A static, multi-page academic website. The HTML, CSS, JavaScript, and images are in the repository root; there is no build step.
+- `index.html` is the home page.
+- `research/`, `publications/`, `teaching/`, `activities/`, and `about/` contain the other pages. Each folder has an `index.html` file, which gives the page a short URL such as `/research/`.
+- `styles.css` controls the layout and colors; `site.js` handles the navigation menus.
+- `assets/` contains images and figures used on the site.
 
-## Editing
+The older `.html` page addresses redirect to the shorter URLs.
 
-- `index.html`: home page
-- `research.html`, `publications.html`, `teaching.html`, `activities.html`, `about.html`: subpages
-- `styles.css`: layout and visual style
-- `site.js`: navigation menus
-- `assets/`: figures and presentation photograph
+## Previewing and updating
 
-Edit the files and commit to the default branch. GitHub Pages publishes updates from the branch root. Internal links are relative, so they work on the project Pages URL and on the custom domain. Keep `CNAME` in the publishing root to preserve the custom domain.
+The site uses plain HTML, CSS, and JavaScript. There is no build step. To preview it locally, run:
+
+```sh
+python3 -m http.server 8000
+```
+
+Then open `http://localhost:8000/`.
+
+GitHub Pages publishes the `main` branch from the repository root. Committing a change there updates the live site. The `CNAME` file connects this repository to `chengyufang.org`; keep it in the root while using this domain.
+
+This is a public repository, so only website files and material intended for public reading belong here.
