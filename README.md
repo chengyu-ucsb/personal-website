@@ -1,26 +1,17 @@
-# Chengyu Fang's website
+# Personal website
 
-This repository contains the files for [chengyufang.org](https://chengyufang.org/), my academic website. It includes pages about my research, publications, teaching, academic activities, and background.
+This repository contains the source for [chengyufang.org](https://chengyufang.org/). The site uses plain HTML, CSS, and JavaScript and is published with GitHub Pages.
 
-## Site files
+## Files
 
-- `index.html` is the home page.
-- `research/`, `publications/`, `teaching/`, `activities/`, and `about/` contain the other pages. Each folder has an `index.html` file, which gives the page a short URL such as `/research/`.
+- `index.html` is the home page. The other pages are in the `about/`, `research/`, `publications/`, `teaching/`, and `activities/` folders.
 - `styles.css` controls the layout and colors; `site.js` handles the navigation menus.
-- `assets/` contains images and figures used on the site.
+- `assets/` contains images and figures.
 
-The older `.html` page addresses redirect to the shorter URLs.
+To edit a page, open its `index.html` file. The older `.html` addresses redirect to the corresponding folders.
 
-## Previewing and updating
+## Preview and publish
 
-The site uses plain HTML, CSS, and JavaScript. There is no build step. To preview it locally, run:
+Run `python3 -m http.server 8000` and open `http://localhost:8000/` to preview the site locally. Commit changes to `main` to publish them. Keep `CNAME` in the repository root while the site uses `chengyufang.org`.
 
-```sh
-python3 -m http.server 8000
-```
-
-Then open `http://localhost:8000/`.
-
-GitHub Pages publishes the `main` branch from the repository root. Committing a change there updates the live site. The `CNAME` file connects this repository to `chengyufang.org`; keep it in the root while using this domain.
-
-This is a public repository, so only website files and material intended for public reading belong here.
+This is a public repository, so keep private drafts and student information out of it.
